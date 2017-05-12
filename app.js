@@ -12,10 +12,9 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(passport.initialize())
-app.use(passport.session())
 
-app.use('/api/v1', routes)
+
+app.use('/v1', routes)
 
 //catch 404 errors
 
