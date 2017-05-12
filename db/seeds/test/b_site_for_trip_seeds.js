@@ -111,7 +111,7 @@ exports.seed = function(knex, Promise) {
         "number": "52.331",
         "location": "Object-based asynchronous knowledge base",
         "user_id": 5
-      })
+      }),
       knex('site_for_trip').insert({
         "id": 12,
         "latitude": "52.11679",

@@ -2,7 +2,6 @@
 
 const express = require('express')
 const bodyParser = require('body-parser')
-const passport = require('passport');
 const routes = require('./routes')
 const cors = require('cors')
 const { knex } = require('./db/database');
@@ -13,10 +12,9 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 
-app.use(passport.initialize())
-app.use(passport.session())
 
-app.use('/api/v1', routes)
+
+app.use('/v1', routes)
 
 //catch 404 errors
 
