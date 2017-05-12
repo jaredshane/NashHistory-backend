@@ -7,10 +7,10 @@ const User = bookshelf.Model.extend({
 }, {
   // method for registering new user
  createUser: (req, res, next) => {
-   console.log('req', req.body.password, req.body.email)
+  //  console.log('req', req.body.password, req.body.email)
    const salt = bcrypt.genSaltSync()
    const hash = bcrypt.hashSync(req.body.password, salt)
-   console.log('hash', hash)
+  //  console.log('hash', hash)
    return knex('users')
    .insert({
      email: req.body.email,
