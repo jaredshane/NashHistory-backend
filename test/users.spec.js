@@ -8,15 +8,15 @@ const {knex} = require('../db/database')
 chai.use(chaiHttp)
 
 describe('register user', () => {
-  beforeEach(() => {
-    return knex.migrate.rollback()
-    .then(() => {
-      return knex.migrate.latest()
-    })
-    .then( () => {
-      return knex.seed.run()
-    })
-  })
+  // beforeEach(() => {
+  //   return knex.migrate.rollback()
+  //   .then(() => {
+  //     return knex.migrate.latest()
+  //   })
+  //   .then( () => {
+  //     return knex.seed.run()
+  //   })
+  // })
 
   describe('POST /v1/register', () => {
     it('should post a new user to the database', () => {
