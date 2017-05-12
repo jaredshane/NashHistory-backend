@@ -19,11 +19,13 @@ const User = bookshelf.Model.extend({
    .returning('*')
  },
 
-  getUser: (username) => {
-    return knex('users').where({username}).first()
+  getUser: (email) => {
+    // console.log('email', email)
+    return knex('users').where({email}).first()
   },
 
   comparePass: (userPassword, databasePassword) => {
+    // console.log(userPassword, databasePassword)
     const bool = bcrypt.compareSync(userPassword, databasePassword)
     if (!bool) throw new Error('password does not match')
     else return true
