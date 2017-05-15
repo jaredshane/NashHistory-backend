@@ -13,5 +13,6 @@ router.get('/', (req, res) => {
 
 router.post('/register', register)
 router.post('/login', login)
+router.get('/trip/:id', getTrips)
 
 module.exports = router
