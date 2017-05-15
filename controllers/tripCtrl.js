@@ -9,3 +9,10 @@ module.exports.getTrips = ({params: {id}}, res, next) => {
     res.status(200).json(trips)
   })
 }
+
+module.exports.saveTrips = ({body}, res, next) => {
+  Trip.addTrip(body)
+  .then((trip) => {
+    res.status(201).json(trip)
+  })
+}
