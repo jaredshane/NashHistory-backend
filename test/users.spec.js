@@ -75,4 +75,25 @@ describe('handle trip routes', () => {
     })
   })
 
+  describe('POST /v1/trip', () => {
+    it('should save a trip that a user posts', () => {
+      return chai.request(server)
+      .post('/v1/trip')
+      .send({
+        latitude: '36.131892',
+        longitude: '-86.756850',
+        title: 'NSS',
+        subtitle: 'Nashville Software School',
+        number: '10',
+        location: 'Right off of interstate blvd',
+        user_id: 1
+      })
+      .then((res) => {
+        console.log(res.body)
+        res.body.should.be.a('object')
+        res.should.have.status(201)
+      })
+    })
+  })
+
 })
