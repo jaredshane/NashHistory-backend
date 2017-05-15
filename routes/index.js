@@ -3,6 +3,7 @@
 const { Router } = require('express')
 const router = Router()
 const { register, login } = require('../controllers/userCtrl')
+const { getTrips, saveTrips } = require('../controllers/tripCtrl')
 
 router.get('/', (req, res) => {
   res.json({
@@ -12,5 +13,7 @@ router.get('/', (req, res) => {
 
 router.post('/register', register)
 router.post('/login', login)
+router.get('/trip/:id', getTrips)
+router.post('/trip', saveTrips)
 
 module.exports = router
