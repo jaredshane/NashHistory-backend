@@ -3,7 +3,7 @@
 const { Router } = require('express')
 const router = Router()
 const { register, login } = require('../controllers/userCtrl')
-const { getTrips } = require('../controllers/tripCtrl')
+const { getTrips, saveTrips } = require('../controllers/tripCtrl')
 
 router.get('/', (req, res) => {
   res.json({
