@@ -7,7 +7,7 @@ const { bookshelf, knex } = require('../db/database')
 module.exports.register = (req, res, next) => {
   User.createUser(req)
   .then((user) => {
-    res.status(200).json({
+    res.status(201).json({
       status: 'success',
       user: user
     })
