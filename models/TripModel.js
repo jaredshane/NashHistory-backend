@@ -13,6 +13,11 @@ const Trip = bookshelf.Model.extend({
     .then((rows) => {
       return rows
     })
+  },
+  addTrip: (body) => {
+    return Trip.forge(body)
+    .save()
+    .then(trip => trip)
   }
 })
 
