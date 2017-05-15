@@ -1,9 +1,11 @@
 'use strict'
 const { knex, bookshelf } = require('../db/database');
 const bcrypt = require('bcryptjs')
+require('./TripModel')
 
 const User = bookshelf.Model.extend({
-  tableName: 'users'
+  tableName: 'users',
+  trip: function() { return this.belongsToMany('Trip')}
 }, {
   // method for registering new user
  createUser: (req, res, next) => {
