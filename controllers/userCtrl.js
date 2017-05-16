@@ -22,15 +22,12 @@ module.exports.register = (req, res, next) => {
 module.exports.login = (req, res, next) => {
   const email = req.body.email
   const password = req.body.password
-  // console.log('email', email, password)
   User.getUser(email)
   .then((response) => {
-    // console.log(response)
     User.comparePass(password, response.password)
     return response
   })
   .then( (resp) => {
-    // console.log('res from 31', resp)
     res.status(200).json(resp)
   })
 }
