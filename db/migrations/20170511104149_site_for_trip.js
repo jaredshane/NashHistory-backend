@@ -4,7 +4,7 @@ exports.up = (knex, Promise) => {
     table.string('latitude').notNullable()
     table.string('longitude').notNullable()
     table.string('title').notNullable()
-    table.string('subtitle')
+    table.string('subtitle', 1000)
     table.string('number').notNullable()
     table.string('location').notNullable()
     table.integer('user_id').notNullable().unsigned().references('users.id')
