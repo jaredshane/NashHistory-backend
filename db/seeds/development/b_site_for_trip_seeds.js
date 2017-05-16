@@ -3,7 +3,6 @@ exports.seed = function(knex, Promise) {
   .then(function () {
     return Promise.all([
       knex('site_for_trip').insert({
-        "id": 1,
         "latitude": "49.79315",
         "longitude": "18.37607",
         "title": "support",
@@ -13,7 +12,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 5
       }),
       knex('site_for_trip').insert({
-        "id": 2,
         "latitude": "44.4",
         "longitude": "108.25",
         "title": "even-keeled",
@@ -23,7 +21,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 2
       }),
       knex('site_for_trip').insert({
-        "id": 3,
         "latitude": "10.45397",
         "longitude": "-64.18256",
         "title": "Versatile",
@@ -33,7 +30,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 20
       }),
       knex('site_for_trip').insert({
-        "id": 4,
         "latitude": "51.08651",
         "longitude": "25.00767",
         "title": "logistical",
@@ -43,7 +39,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 9
       }),
       knex('site_for_trip').insert({
-        "id": 5,
         "latitude": "63.4305",
         "longitude": "10.3951",
         "title": "Cross-group",
@@ -53,7 +48,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 17
       }),
       knex('site_for_trip').insert({
-        "id": 6,
         "latitude": "38.0918",
         "longitude": "111.80721",
         "title": "value-added",
@@ -63,7 +57,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 16
       }),
       knex('site_for_trip').insert({
-        "id": 7,
         "latitude": "-27.4524",
         "longitude": "23.43246",
         "title": "Fundamental",
@@ -73,7 +66,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 11
       }),
       knex('site_for_trip').insert({
-        "id": 8,
         "latitude": "20.0397",
         "longitude": "-101.645",
         "title": "multi-tasking",
@@ -83,7 +75,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 6
       }),
       knex('site_for_trip').insert({
-        "id": 9,
         "latitude": "-8.2137",
         "longitude": "114.3818",
         "title": "3rd generation",
@@ -93,7 +84,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 19
       }),
       knex('site_for_trip').insert({
-        "id": 10,
         "latitude": "-9.906",
         "longitude": "124.5313",
         "title": "Adaptive",
@@ -103,7 +93,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 11
       }),
       knex('site_for_trip').insert({
-        "id": 11,
         "latitude": "-2.87056",
         "longitude": "30.52806",
         "title": "Up-sized",
@@ -113,7 +102,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 5
       }),
       knex('site_for_trip').insert({
-        "id": 12,
         "latitude": "52.11679",
         "longitude": "-106.63452",
         "title": "migration",
@@ -123,7 +111,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 4
       }),
       knex('site_for_trip').insert({
-        "id": 13,
         "latitude": "49.97954",
         "longitude": "16.56475",
         "title": "content-based",
@@ -133,7 +120,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 9
       }),
       knex('site_for_trip').insert({
-        "id": 14,
         "latitude": "-10.5732",
         "longitude": "121.7388",
         "title": "Diverse",
@@ -143,7 +129,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 18
       }),
       knex('site_for_trip').insert({
-        "id": 15,
         "latitude": "28.34659",
         "longitude": "115.32742",
         "title": "multi-tasking",
@@ -153,7 +138,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 13
       }),
       knex('site_for_trip').insert({
-        "id": 16,
         "latitude": "24.38583",
         "longitude": "115.43068",
         "title": "website",
@@ -163,7 +147,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 18
       }),
       knex('site_for_trip').insert({
-        "id": 17,
         "latitude": "11.2202",
         "longitude": "123.6925",
         "title": "alliance",
@@ -173,7 +156,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 20
       }),
       knex('site_for_trip').insert({
-        "id": 18,
         "latitude": "-7.3635",
         "longitude": "108.3156",
         "title": "Integrated",
@@ -183,7 +165,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 1
       }),
       knex('site_for_trip').insert({
-        "id": 19,
         "latitude": "-21.19361",
         "longitude": "-48.16389",
         "title": "encoding",
@@ -193,7 +174,6 @@ exports.seed = function(knex, Promise) {
         "user_id": 10
       }),
       knex('site_for_trip').insert({
-        "id": 20,
         "latitude": "51.78167",
         "longitude": "87.26306",
         "title": "Reactive",
