@@ -16,5 +16,7 @@ router.post('/register', register)
 router.post('/login', login)
 router.get('/trip/:id', getTrips)
 router.post('/trip', saveTrips)
+router.post('/journal', saveJournalEntry)
+router.get('/journal/:id', getJournalEntries)
 
 module.exports = router
