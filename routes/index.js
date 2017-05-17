@@ -4,6 +4,7 @@ const { Router } = require('express')
 const router = Router()
 const { register, login } = require('../controllers/userCtrl')
 const { getTrips, saveTrips } = require('../controllers/tripCtrl')
+const { getJournalEntries, saveJournalEntry } = require('../controllers/journalCtrl')
 
 router.get('/', (req, res) => {
   res.json({
