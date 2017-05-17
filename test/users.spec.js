@@ -52,22 +52,67 @@ chai.use(chaiHttp)
 //     })
 //   })
 // })
+//
+// describe('handle trip routes', () => {
+//   beforeEach(() => {
+//     return knex.migrate.rollback()
+//     .then(() => {
+//       return knex.migrate.latest()
+//     })
+//     .then( () => {
+//       return knex.seed.run()
+//     })
+//   })
+//
+//   describe('GET /v1/trip/:id', () => {
+//     it('should get get all the trips for a user\' id', () => {
+//       return chai.request(server)
+//       .get('/v1/trip/2')
+//       .then((res) => {
+//         console.log(res.body)
+//         res.body.should.be.a('array')
+//       })
+//     })
+//   })
+//
+//   describe('POST /v1/trip', () => {
+//     it('should save a trip that a user posts', () => {
+//       return chai.request(server)
+//       .post('/v1/trip')
+//       .send({
+//         latitude: '36.131892',
+//         longitude: '-86.756850',
+//         title: 'NSS',
+//         subtitle: 'Nashville Software School',
+//         number: '10',
+//         location: 'Right off of interstate blvd',
+//         user_id: 1
+//       })
+//       .then((res) => {
+//         console.log(res.body)
+//         res.body.should.be.a('object')
+//         res.should.have.status(201)
+//       })
+//     })
+//   })
+//
+// })
 
-describe('handle trip routes', () => {
+describe('handle journal routes', () => {
   beforeEach(() => {
-    return knex.migrate.rollback()
-    .then(() => {
-      return knex.migrate.latest()
+      return knex.migrate.rollback()
+      .then(() => {
+        return knex.migrate.latest()
+      })
+      .then( () => {
+        return knex.seed.run()
+      })
     })
-    .then( () => {
-      return knex.seed.run()
-    })
-  })
 
-  describe('GET /v1/trip/:id', () => {
-    it('should get get all the trips for a user\' id', () => {
+  describe('GET /v1/journal/:id', () => {
+    it('should get get all the journal entries for a user\'s id', () => {
       return chai.request(server)
-      .get('/v1/trip/2')
+      .get('/v1/journal/2')
       .then((res) => {
         console.log(res.body)
         res.body.should.be.a('array')
@@ -75,25 +120,21 @@ describe('handle trip routes', () => {
     })
   })
 
-  describe('POST /v1/trip', () => {
-    it('should save a trip that a user posts', () => {
-      return chai.request(server)
-      .post('/v1/trip')
-      .send({
-        latitude: '36.131892',
-        longitude: '-86.756850',
-        title: 'NSS',
-        subtitle: 'Nashville Software School',
-        number: '10',
-        location: 'Right off of interstate blvd',
-        user_id: 1
-      })
-      .then((res) => {
-        console.log(res.body)
-        res.body.should.be.a('object')
-        res.should.have.status(201)
+  describe('POST /v1/journal', () => {
+      it('should save a journal entry that a user posts', () => {
+        return chai.request(server)
+        .post('/v1/journal')
+        .send({
+          entry: 'oijwefoiejfoeiwjf',
+          photo_url: 'www.google.com',
+          user_id: 1
+        })
+        .then((res) => {
+          console.log(res.body)
+          res.body.should.be.a('object')
+          res.should.have.status(201)
+        })
       })
     })
-  })
 
 })
